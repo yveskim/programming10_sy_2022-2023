@@ -4,12 +4,29 @@
     <meta charset="utf-8">
     <title>My Website</title>
     <style media="screen">
-        #btn{
-          background-color: orange;
-        }
+      #main-div{
+        margin: 10% 20% 20% 20%;
+      }
     </style>
   </head>
   <body>
-    <button id="btn">My Button</button>
+    <button type="button" name="button" onclick="loadFunction()">click me</button>
+    <div class="" id="main-div">
+      <p class="pharagraph" id="p1">Paragraph 1</p>
+      <p class="pharagraph" id="p2">Paragraph 2</p>
+      <p class="pharagraph" id="p3">Paragraph 3</p>
+      <p class="pharagraph" id="p4">Paragraph 4</p>
+    </div>
+
+    <script type="text/javascript">
+      function loadFunction(){
+         var elements = document.getElementsByClassName('pharagraph');
+         document.getElementsByClassName('pharagraph')[0].innerHTML = "This is a Pharagraph";
+         document.getElementsByClassName('pharagraph')[1].innerHTML = "This is a Pharagraph";
+         document.getElementsByClassName('pharagraph')[2].innerHTML = "This is a Pharagraph";
+         document.getElementsByClassName('pharagraph')[3].innerHTML = "This is a Pharagraph";
+      }
+    </script>
+
   </body>
 </html>
