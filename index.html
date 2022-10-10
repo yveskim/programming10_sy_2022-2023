@@ -4,29 +4,75 @@
     <meta charset="utf-8">
     <title>My Website</title>
     <style media="screen">
-      #main-div{
-        margin: 10% 20% 20% 20%;
+      body{
+        margin: 5% 5% 5% 5%;
+        background-image: url('images/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+      }
+
+      div{
+        color: white;
+      }
+
+      .div-personal-info{
+        background-color: rgb(0,0,0, .7);
+        padding: 2%;
       }
     </style>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   </head>
   <body>
-    <button type="button" name="button" onclick="loadFunction()">click me</button>
-    <div class="" id="main-div">
-      <p class="pharagraph" id="p1">Paragraph 1</p>
-      <p class="pharagraph" id="p2">Paragraph 2</p>
-      <p class="pharagraph" id="p3">Paragraph 3</p>
-      <p class="pharagraph" id="p4">Paragraph 4</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="div-personal-info">
+            <h1>div personal info</h1>
+            <h4>Yves Kim C. Cabanting</h4>
+            <h5>yveskim.cabanting@iloilonhs.edu.ph</h5>
+            <h5>Age: 00</h5>
+            <h5>Gender: Male</h5>
+            <h5>Contact No. 09945342643</h5>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="div-pic">
+            <h1>pic</h1>
+            <img src="images/yves.jpg" alt="profile_pic" style="width: 200px; height:200px;">
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="div-other-info">
+            <h1>other info</h1>
+            <h5>Favorite Food: spaghetti</h5>
+            <h5>Hobby: Basketball</h5>
+            <h5>Favorite Subject: Programming</h5>
+            <h5>Height: 63cm</h5>
+            <h5>Weight: 65kg</h5>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="div-description">
+            <h1>description</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipissicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <script type="text/javascript">
-      function loadFunction(){
-         var elements = document.getElementsByClassName('pharagraph');
-         document.getElementsByClassName('pharagraph')[0].innerHTML = "This is a Pharagraph";
-         document.getElementsByClassName('pharagraph')[1].innerHTML = "This is a Pharagraph";
-         document.getElementsByClassName('pharagraph')[2].innerHTML = "This is a Pharagraph";
-         document.getElementsByClassName('pharagraph')[3].innerHTML = "This is a Pharagraph";
-      }
-    </script>
 
+
+
+
+
+
+
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
   </body>
 </html>
