@@ -69,10 +69,65 @@
 
 
     <script type="text/javascript">
-    let a = 20;
-    for (let i = 1; i <= a  ; i += 2 ) {
-      console.log(i);
-    }
+
+        let ages = [10, 12, 36, 14, 22, 19, 18];
+
+        let persons = [
+          {'name': 'Yves', 'gender': 'male', 'age': 21, 'sport': 'basketball'},
+          {'name': 'Jake', 'gender': 'male', 'age': 16, 'sport': 'soccer'},
+          {'name': 'Angelica', 'gender': 'female', 'age': 15, 'sport': 'volleyball'},
+          {'name': 'Martha', 'gender': 'female', 'age': 27, 'sport': 'volleyball'},
+          {'name': 'John', 'gender': 'male', 'age': 11, 'sport': 'chess'},
+          {'name': 'Mike', 'gender': 'male', 'age': 41, 'sport': 'badminton'},
+          {'name': 'Grace', 'gender': 'female', 'age': 22, 'sport': 'volleyball'},
+          {'name': 'Tyler', 'gender': 'male', 'age': 25, 'sport': 'soccer'}
+        ];
+
+        // console.log(persons[5].age, persons[2].sport);
+        
+        const male = persons.filter(function(person){
+            if (person.sport === 'volleyball') {
+                return true;
+            }
+        });
+
+        console.log(male);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log(age);
+        // for (var i = 0; i < age.length; i++) {
+        //   if (age[i] >= 18) {
+        //     console.log(age[i]);
+        //   }
+        // }
+
+
+        // const legalAge = ages.filter(age => age >= 18);
+
+        // const legalAge = ages.filter(function(age){
+        //   if (age >= 18) {
+        //     return true;
+        //   }
+        // });
+
+
+
+
+
+
+
 
 
 
