@@ -1,0 +1,76 @@
+<script type="text/javascript">
+
+  let arr = [5, 3, 7, 33, 4, 13, 54, 76, 23];
+  // let arr2 = [15, 13, 4, 33, 4, 23, 74, 79, 23, 90, 15];
+
+  function sortArray(a)
+  {
+  	while(1) //sort the values in the array. lowest to highest by swaping indexes
+  	{
+	    let swapped = 0;
+
+  		for(let i=0; i < a.length - 1; i++)
+  		{
+  			if(a[i] > a[i+1])//compare array to next index
+  			{
+  				let temp = a[i];
+  				a[i] = a[i+1];
+  				a[i+1] = temp;
+  				swapped = 1;
+  			}
+  		}
+
+  		if(swapped == 0)//stop the loop if i > aayVal
+  		{
+  			break;
+  		}
+  	}
+    let arr = [];
+  	for(let i=0; i< a.length; i++) //display the sequence value of aay
+  	{
+      arr.push(a[i]);
+  	}
+      return arr;
+  }
+
+  console.log(sortArray(arr));
+  // console.log(sortArray(arr2));
+
+
+  function binarySearch(arr, size, searchValue)
+  {
+  	let low = 0;
+  	let high = size;
+  	let mid = 0;
+
+    typeof(low);
+
+  	while(low <= high)
+  	{
+  		// mid = (low + high)/2;
+      mid = low + Math.floor((high - low) / 2);
+  		if(searchValue == arr[mid])
+  			return mid;
+  		if(searchValue > arr[mid])
+  		    low = mid + 1;
+  		else
+  		    high = mid -1;
+  	}
+
+  	return -1;
+  }
+
+  let sortedArray = sortArray(arr);
+
+  // console.log(sortedArray);
+
+	let result = binarySearch(sortedArray,  sortedArray.length - 1, 76);
+	if(result >= 0)
+	{
+    console.log("The number " + sortedArray[result] + " was found at the element with index "+ result);
+	}else
+	{
+    console.log("the number you choose was not found in the array. ");
+	}
+
+</script>
