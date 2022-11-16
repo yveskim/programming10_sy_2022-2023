@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- <script type="text/javascript" src=""></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <style media="screen">
+      .p1Color{
+          color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" id="btn1">Click Me!</button>
+    <p id="p1">Pharagraph 1</p>
+    <p id="p2">Pharagraph 2</p>
+
+    <script type="text/javascript">
+      $('#btn1').click(function(){
+        $('#p1').hide(function(){
+          setTimeout(function(){
+            $('#p2').hide();
+          }, 2000);
+        });
+      });
+    </script>
+  </body>
+</html>
