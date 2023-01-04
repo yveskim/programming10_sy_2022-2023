@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const numbersArray1 = [10, 12, 3, 45, 65, 22, 2];
+      const numbersArray2 = [14, 3, 67, 120, 44, 16, 29, 40, 51, 6];
+
+      function sortedArray(arr){
+        let sortArray = [];
+        sortArray = arr.sort(function(a,b){
+          return a-b;
+        })
+
+        let max = sortArray[arr.length - 1];
+        let min = sortArray[0];
+
+        return [sortArray, min, max];
+      }
+      console.log("The Array is: " + numbersArray1);
+      console.log("The Sorted Array is: "+ sortedArray(numbersArray1)[0]);
+      console.log("The Min is: "+ sortedArray(numbersArray1)[1]);
+      console.log("The Max is: "+ sortedArray(numbersArray1)[2]);
+
+      console.log("The Array is: " + numbersArray2);
+      console.log("The Sorted Array is: "+ sortedArray(numbersArray2)[0]);
+      console.log("The Min is: "+ sortedArray(numbersArray2)[1]);
+      console.log("The Max is: "+ sortedArray(numbersArray2)[2]);
+
+
+    </script>
+  </body>
+</html>

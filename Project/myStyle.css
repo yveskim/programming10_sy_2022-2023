@@ -1,0 +1,11 @@
+.container{
+  margin-top: 5%;
+}
+
+.title{
+  text-align: center;
+  background-color: skyblue;
+  padding: 2%;
+  border-radius: 5em;
+  color: RGB(150,0,100);
+}
