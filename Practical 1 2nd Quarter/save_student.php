@@ -13,13 +13,22 @@
             "birthday" => $birthday
         );
 
-        $student_data = json_encode($student);
-        $data_result = file_put_contents('students.json', $student_data);
+        //open or read json data
+        $student_data = file_get_contents('students.json');//access the json data file
+        $tempArray = json_decode($student_data);//create a temporary array and store the current student data from json file
 
-        if($data_result){
-            echo "save successful";
+        //append additional json to json file
+        $tempArray[] = $student;//append the new student array to data of current student from json file
+        $jsonData = json_encode($tempArray);//conver to combined data to new jsonData variable
+
+        //write json to file json file
+        if (file_put_contents('students.json', $jsonData)){
+            echo "JSON file created successfully...";
+            // header("location : view_student.php");
         }else{
-            echo "Failed to save data";
-        }
+            echo "Oops! Error creating json file...";
+        } 
+
+       
     }
 ?>

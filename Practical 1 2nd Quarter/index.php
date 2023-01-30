@@ -14,8 +14,9 @@
     </style>
 </head>
 <body>
-    <h1>STUDENTS</h1>
-    
+    <br>
+    <center><h1>STUDENTS</h1></center>
+    <hr>
     <form id="student_form">
         <div class="row">
             <div class="col-md-12">
@@ -50,13 +51,16 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
+                <a class="btn btn-info" href="view_student.php" style="width: 100%;">View Students</a>
+            </div>
+            <div class="col-md-6">
                 <input class="btn btn-primary" type="submit" value="Submit Form" style="width: 100%;">
             </div>
         </div>
     </form>
 
-    <a class="btn btn-info" href="view_student.php">View Students</a>
+    
 </body>
 
 <script>
@@ -69,12 +73,13 @@
                 data: $('#student_form').serialize(),
                 success: function(data){
                     console.log(data);
+                    window.location.href = "view_student.php"
                 },
                 error: function(err){
                     console.log(err);
                 },
                 complete: function(){
-
+                    
                 }
             })
         })
