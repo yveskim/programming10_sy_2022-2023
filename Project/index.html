@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <style media="screen">
+      .content_div{
+        margin: 5rem;
+        padding: 5rem;
+        border-radius: 4rem;
+        min-height: 700px;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navigation_menu">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a type="button" class="nav-link" id="btn-login">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="content_div">
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <center><h1 id="content_title">Home Page</h1></center>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Welcome to home page</h3>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+      <script type="text/javascript" src="bootstrap-5.2.2-dist/bootstrap-5.2.2-dist/js/bootstrap.bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){
+            $('#btn-login').click(function(){
+                // console.log('btn is working');
+                $('.content_div').load('login/login_page.html');
+            });
+          });
+      </script>
+  </body>
+</html>

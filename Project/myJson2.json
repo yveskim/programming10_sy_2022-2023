@@ -1,0 +1,9 @@
+
+  {
+    "users": [
+      {"username": "mike", "password": "mike123", "user_level": 1},
+      {"username": "jane", "password": "jane123", "user_level": 2},
+      {"username": "george", "password": "george123", "user_level": 2},
+      {"username": "bryan", "password": "bryan123", "user_level": 3}
+    ]
+  }
