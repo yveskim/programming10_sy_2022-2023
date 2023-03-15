@@ -5,6 +5,18 @@
         echo $_GET['message'];
     }
 
+    if(isset($_GET['student_id'])){
+        $sid = $_GET['student_id'];
+
+        $sql = "DELETE FROM student_tbl WHERE stud_id = '$sid'";
+
+        if($conn->query($sql) === TRUE){
+            echo "data deleted successfully";
+        }else{
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
+
 
     $query = "SELECT * FROM student_tbl";
 
@@ -56,7 +68,7 @@
                                 <td><?php echo $res['gender'] ?></td>
                                 <td><?php echo $res['bday'] ?></td>
                                 <td><a href="edit_student.php?student_id=<?php echo $res['stud_id'] ?>">Edit</a>&nbsp;|&nbsp;
-                                <a href="#" style="color:red;">Delete</a>
+                                <a href="view_student.php?student_id=<?php echo $res['stud_id'] ?>" style="color:red;">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
