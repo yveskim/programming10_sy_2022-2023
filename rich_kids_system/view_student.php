@@ -1,6 +1,11 @@
 <?php 
     require_once "connect_db.php";
 
+    if(isset($_GET['message'])){
+        echo $_GET['message'];
+    }
+
+
     $query = "SELECT * FROM student_tbl";
 
     $result = $conn->query($query);
@@ -39,6 +44,7 @@
                             <th>Age</th>
                             <th>Gender</th>
                             <th>Birthday</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,6 +55,9 @@
                                 <td><?php echo $res['age'] ?></td>
                                 <td><?php echo $res['gender'] ?></td>
                                 <td><?php echo $res['bday'] ?></td>
+                                <td><a href="edit_student.php?student_id=<?php echo $res['stud_id'] ?>">Edit</a>&nbsp;|&nbsp;
+                                <a href="#" style="color:red;">Delete</a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
