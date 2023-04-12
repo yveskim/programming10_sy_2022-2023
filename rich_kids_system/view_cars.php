@@ -5,10 +5,10 @@
         echo $_GET['message'];
     }
 
-    if(isset($_GET['student_id'])){
-        $sid = $_GET['student_id'];
+    if(isset($_GET['car_id'])){
+        $car_id = $_GET['car_id'];
 
-        $sql = "DELETE FROM student_tbl WHERE stud_id = '$sid'";
+        $sql = "DELETE FROM cars_tbl WHERE car_id = '$car_id'";
 
         if($conn->query($sql) === TRUE){
             echo "data deleted successfully";
@@ -18,7 +18,7 @@
     }
 
 
-    $query = "SELECT * FROM student_tbl";
+    $query = "SELECT * FROM cars_tbl";
 
     $result = $conn->query($query);
 
@@ -35,15 +35,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">  
     <script src="jquery/jquery-3.6.1.min.js"></script>  
-    <title>Document</title>
+    <title>Cars</title>
 </head>
 <body>
     <br>
     <div class="container">
-        <a href="add_student.php" class="btn btn-primary">ADD NEW STUDENT</a>
+        <a href="add_car.php" class="btn btn-primary">ADD NEW CAR</a>
         <div class="row">
             <div class="col-md-12">
-                <center><h2>Students List</h2></center>
+                <center><h2>Cars List</h2></center>
             </div>
         </div><hr>
         <div class="row">
@@ -52,23 +52,25 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Birthday</th>
+                            <th>Car Name</th>
+                            <th>Car Type</th>
+                            <th>Color</th>
+                            <th>Model</th>
+                            <th>Date Acquired</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($result as $res): ?>
                             <tr>
-                                <td><?php echo $res['stud_id'] ?></td>
-                                <td><?php echo $res['name'] ?></td>
-                                <td><?php echo $res['age'] ?></td>
-                                <td><?php echo $res['gender'] ?></td>
-                                <td><?php echo $res['bday'] ?></td>
-                                <td><a href="edit_student.php?student_id=<?php echo $res['stud_id'] ?>">Edit</a>&nbsp;|&nbsp;
-                                    <a href="view_student.php?student_id=<?php echo $res['stud_id'] ?>" style="color:red;">Delete</a>
+                                <td><?php echo $res['car_id'] ?></td>
+                                <td><?php echo $res['car_name'] ?></td>
+                                <td><?php echo $res['car_type'] ?></td>
+                                <td><?php echo $res['color'] ?></td>
+                                <td><?php echo $res['model'] ?></td>
+                                <td><?php echo $res['date_acquired'] ?></td>
+                                <td><a href="edit_car.php?car_id=<?php echo $res['car_id'] ?>">Edit</a>&nbsp;|&nbsp;
+                                    <a href="view_cars.php?car_id=<?php echo $res['car_id'] ?>" style="color:red;">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

@@ -33,24 +33,56 @@ if(isset($_POST['submit_student'])){
         form{
             padding: 0 20% 0 20%;
         }
-        .full-size{
-            width: 100%;
-        }
     </style>
 </head>
 <body>
     <br>
-    <center><h1>RICH KIDS SYSTEM</h1></center>
+    <center><h1>ADD STUDENTS</h1></center>
     <hr>
+    <form id="student_form" action="add_student.php" method="post">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="">Name</label>
+                <input class="form-control" type="text" name="student_name">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="">Age</label>
+                <input class="form-control" type="text" name="student_age">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="">Gender</label>
+                <select name="student_gender" class="form-control">
+                    <option value="">-</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="">Birthday</label>
+                <input class="form-control" type="date" name="student_birthday">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="btn btn-info" href="view_student.php" style="width: 100%;">View Students</a>
+            </div>
+            <div class="col-md-6">
+                <input class="btn btn-primary" type="submit" name="submit_student" value="Submit Form" style="width: 100%;">
+            </div>
+        </div>
+    </form>
+
     
-    <div class="row">
-        <div class="col-md-2">
-            <a href="view_student.php" class="btn btn-primary full-size">view student</a>
-        </div>
-        <div class="col-md-2">
-            <a href="view_cars.php" class="btn btn-info full-size">view cars</a>
-        </div>
-    </div>
 </body>
 
 <script>
